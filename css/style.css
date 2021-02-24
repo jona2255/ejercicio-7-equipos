@@ -1,0 +1,14 @@
+body {
+  background-color: #90a081;
+}
+button {
+  background-color: #ffc107;
+  border: none;
+  border-radius: 6px;
+}
+aside {
+  background-color: #f1ac7b;
+}
+li {
+  padding: 15px;
+}
