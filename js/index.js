@@ -16,4 +16,3 @@ function equiposPorTipo(equipos) {
 function equiposTipoLocalidad(equipos, tipo, localidad) {
   return equipos.filter(equipo => equipo.tipo.toLowerCase() === tipo && equipo.asignado.provincia.toLowerCase() === localidad);
 }
-console.log(equiposTipoLocalidad(equipos, "portátil", "tarragona"));
