@@ -1,5 +1,5 @@
 function trabajadoresTipo(equipos, tipo) {
-  return equipos.filter(equipo => equipo.tipo === tipo);
+  return equipos.filter(equipo => equipo.tipo.toLowerCase() === tipo);
 }
 function equiposPorTipo(equipos) {
   const equiposModificados = [];
@@ -13,3 +13,7 @@ function equiposPorTipo(equipos) {
   });
   return equiposModificados;
 }
+function equiposTipoLocalidad(equipos, tipo, localidad) {
+  return equipos.filter(equipo => equipo.tipo.toLowerCase() === tipo && equipo.asignado.provincia.toLowerCase() === localidad);
+}
+console.log(equiposTipoLocalidad(equipos, "portátil", "tarragona"));
