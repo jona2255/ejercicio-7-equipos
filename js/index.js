@@ -1,6 +1,7 @@
 function trabajadoresTipo(equipos, tipo) {
   return equipos.filter(equipo => equipo.tipo.toLowerCase() === tipo);
 }
+
 function equiposPorTipo(equipos) {
   const equiposModificados = [];
   equiposModificados.push({
@@ -13,6 +14,16 @@ function equiposPorTipo(equipos) {
   });
   return equiposModificados;
 }
+
 function equiposTipoLocalidad(equipos, tipo, localidad) {
   return equipos.filter(equipo => equipo.tipo.toLowerCase() === tipo && equipo.asignado.provincia.toLowerCase() === localidad);
+}
+
+function resumenEquipos(equipos) {
+  const equiposModificados = equipos.map((equipo) => ({
+    id: equipo.id,
+    poblacion: equipo.asignado.poblacion,
+    provincia: equipo.asignado.provincia
+  }));
+  return equiposModificados;
 }
