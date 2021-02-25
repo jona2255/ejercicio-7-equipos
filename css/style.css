@@ -8,14 +8,18 @@ button {
 }
 aside {
   background-color: #f1ac7b;
+  height: 100vh;
+  min-width: 30vw;
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 li {
   padding: 15px;
 }
 
 .consola {
-  height: 300px;
-  width: 400px;
   background-color: #1e1e1e;
   color: #0dbc6a;
   font-size: small;
@@ -24,4 +28,10 @@ li {
 
 pre {
   color: #0dbc6a;
+}
+.consola-size {
+  width: 75%;
+  min-width: 75%;
+  height: 75%;
+  padding: 10px;
 }
