@@ -1,7 +1,11 @@
 function equiposMayoresEdad(equipos, edad) {
   return equipos.filter(equipo => equipo.asignado.empleado.edad >= edad);
 }
-console.log(equiposMayoresEdad(equipos, 30));
+
+function equiposProvincia(equipos, provincia) {
+  return equipos.filter(equipo => equipo.asignado.provincia.toLowerCase() === provincia.toLowerCase());
+}
+
 function trabajadoresTipo(equipos, tipo) {
   return equipos.filter(equipo => equipo.tipo.toLowerCase() === tipo);
 }
@@ -47,7 +51,7 @@ function edadMedia(arrayEquipos) {
 }
 
 function equiposPorEdad(arrayEquipos) {
-  const ordenEdad = arrayEquipos.sort((a, b) => (a.asignado.empleado.edad > b.asignado.empleado.edad) ? 1 : -1);
+  const ordenEdad = arrayEquipos.sort((a, b) => ((a.asignado.empleado.edad > b.asignado.empleado.edad) ? 1 : -1));
 
   return ordenEdad;
 }
