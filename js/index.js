@@ -27,3 +27,29 @@ function resumenEquipos(equipos) {
   }));
   return equiposModificados;
 }
+
+function puestos(arrayEquipos) {
+  const puesto = arrayEquipos.map(arrayEquipos => arrayEquipos.asignado.empleado.puesto);
+
+  return puesto;
+}
+
+function edadMedia(arrayEquipos) {
+  const reducer = (acc, currentValue) => acc + currentValue;
+  const media = arrayEquipos.map(arrayEquipos => arrayEquipos.asignado.empleado.edad)
+    .reduce(reducer) / arrayEquipos.length;
+
+  return media;
+}
+
+function equiposPorEdad(arrayEquipos) {
+  const ordenEdad = arrayEquipos.sort((a, b) => (a.asignado.empleado.edad > b.asignado.empleado.edad) ? 1 : -1);
+
+  return ordenEdad;
+}
+
+function equiposTipo(arrayEquipos, tipo) {
+  const tipoEquipo = arrayEquipos.filter(arrayEquipos => arrayEquipos.tipo === tipo);
+
+  return tipoEquipo;
+}
