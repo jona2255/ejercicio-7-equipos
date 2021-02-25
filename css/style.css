@@ -12,3 +12,9 @@ aside {
 li {
   padding: 15px;
 }
+
+.consola {
+  background-color: #1e1e1e;
+  color: #0dbc6a;
+  font-size: small;
+}
