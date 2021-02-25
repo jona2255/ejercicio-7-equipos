@@ -1,9 +1,15 @@
-function equiposMayoresEdad(equipos, edad) {
-  return equipos.filter(equipo => equipo.asignado.empleado.edad >= edad);
+function equiposMayoresEdad(arrayEquipos, edad) {
+  return arrayEquipos.filter(equipo => equipo.asignado.empleado.edad >= edad);
 }
 
-function equiposProvincia(equipos, provincia) {
-  return equipos.filter(equipo => equipo.asignado.provincia.toLowerCase() === provincia.toLowerCase());
+function equiposProvincia(arrayEquipos, provincia) {
+  return arrayEquipos.filter(equipo => equipo.asignado.provincia.toLowerCase() === provincia.toLowerCase());
+}
+
+function provincias(arrayEquipos) {
+  return arrayEquipos
+    .map(equipo => equipo.asignado.provincia)
+    .filter((provincia, i, provincias) => provincias.indexOf(provincia) === i);
 }
 
 function trabajadoresTipo(equipos, tipo) {
