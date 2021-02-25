@@ -14,7 +14,14 @@ li {
 }
 
 .consola {
+  height: 300px;
+  width: 400px;
   background-color: #1e1e1e;
   color: #0dbc6a;
   font-size: small;
+  overflow-y: scroll;
+}
+
+pre {
+  color: #0dbc6a;
 }
