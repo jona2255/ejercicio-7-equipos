@@ -1,3 +1,7 @@
+function equiposMayoresEdad(equipos, edad) {
+  return equipos.filter(equipo => equipo.asignado.empleado.edad >= edad);
+}
+console.log(equiposMayoresEdad(equipos, 30));
 function trabajadoresTipo(equipos, tipo) {
   return equipos.filter(equipo => equipo.tipo.toLowerCase() === tipo);
 }
