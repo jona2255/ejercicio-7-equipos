@@ -12,29 +12,29 @@ function provincias(arrayEquipos) {
     .filter((provincia, i, provincias) => provincias.indexOf(provincia) === i);
 }
 
-function trabajadoresTipo(equipos, tipo) {
-  return equipos.filter(equipo => equipo.tipo.toLowerCase() === tipo);
+function trabajadoresTipo(arrayEquipos, tipo) {
+  return arrayEquipos.filter(equipo => equipo.tipo.toLowerCase() === tipo.toLowerCase());
 }
 
-function equiposPorTipo(equipos) {
+function equiposPorTipo(arrayEquipos) {
   const equiposModificados = [];
   equiposModificados.push({
     tipo: "Portátil",
-    equipos: equipos.filter(equipo => equipo.tipo === "Portátil")
+    equipos: arrayEquipos.filter(equipo => equipo.tipo === "Portátil")
   });
   equiposModificados.push({
     tipo: "Sobremesa",
-    equipos: equipos.filter(equipo => equipo.tipo === "Sobremesa")
+    equipos: arrayEquipos.filter(equipo => equipo.tipo === "Sobremesa")
   });
   return equiposModificados;
 }
 
-function equiposTipoLocalidad(equipos, tipo, localidad) {
-  return equipos.filter(equipo => equipo.tipo.toLowerCase() === tipo && equipo.asignado.provincia.toLowerCase() === localidad);
+function equiposTipoLocalidad(arrayEquipos, tipo, localidad) {
+  return arrayEquipos.filter(equipo => equipo.tipo.toLowerCase() === tipo.toLowerCase() && equipo.asignado.provincia.toLowerCase() === localidad.toLowerCase());
 }
 
-function resumenEquipos(equipos) {
-  const equiposModificados = equipos.map((equipo) => ({
+function resumenEquipos(arrayEquipos) {
+  const equiposModificados = arrayEquipos.map((equipo) => ({
     id: equipo.id,
     poblacion: equipo.asignado.poblacion,
     provincia: equipo.asignado.provincia
@@ -63,7 +63,7 @@ function equiposPorEdad(arrayEquipos) {
 }
 
 function equiposTipo(arrayEquipos, tipo) {
-  const tipoEquipo = arrayEquipos.filter(arrayEquipos => arrayEquipos.tipo === tipo);
+  const tipoEquipo = arrayEquipos.filter(arrayEquipos => arrayEquipos.tipo.toLowerCase() === tipo.toLowerCase());
 
   return tipoEquipo;
 }
